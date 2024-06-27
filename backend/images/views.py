@@ -5,14 +5,19 @@ import cloudinary.uploader
 from bson.objectid import ObjectId
 from .serializers import ImageUploadSerializer
 from .models import Image
-from accounts.models import User  # Assuming you have a User model defined
+from accounts.models import User  
 from django.conf import settings
 
 
+CLOUD_NAME = settings.CLOUD_NAME
+API_KEY = settings.API_KEY
+API_SECRET = settings.API_SECRET
+
+
 cloudinary.config(
-    cloud_name="duofvpxou",
-    api_key="698869982165375",
-    api_secret="jF9C8Dr6u6cItIpeIRuvwBYweIY",
+    cloud_name=CLOUD_NAME,
+    api_key=API_KEY,
+    api_secret=API_SECRET,
     secure=True,
 )
 

@@ -154,8 +154,7 @@ REST_FRAMEWORK = {
 
 DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
 
-# database
-
+# Cloudinary 
 
 CLOUD_NAME = os.getenv("CLOUD_NAME")
 API_KEY = os.getenv("API_KEY")
@@ -168,3 +167,8 @@ STRIPE_PUBLISHABLE_KEY = os.getenv("STRIPE_PUBLISHABLE_KEY")
 STRIPE_SECRET_KEY = os.getenv("STRIPE_SECRET_KEY")
 # Application-specific settings
 STATIC_URL = "/static/"
+
+
+
+# Database Url
+DATABASE_URL = os.getenv('DATABASE_URL')

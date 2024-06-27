@@ -2,7 +2,8 @@ import pymongo
 from django.conf import settings
 
 
-url = "mongodb+srv://batman:imbatman@cluster0.zn4fxpj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+# url = "mongodb+srv://batman:imbatman@cluster0.zn4fxpj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+url = settings.DATABASE_URL
 client = pymongo.MongoClient(url, ssl=True)
 
 
