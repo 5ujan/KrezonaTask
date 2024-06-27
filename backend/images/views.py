@@ -1,3 +1,18 @@
+"""
+Description: Contains API views for image upload, retrieval, purchase, and deletion.
+Author: Sujan Baskota
+Date created: June 26, 2024
+Date modified: June 26, 2024
+Modifications added:
+    <Start of modifications section>
+        2024-06-26 => Added ImageUploadView for uploading images to Cloudinary and storing URLs in MongoDB.
+        2024-06-26 => Implemented AllGifsView for retrieving all GIF URLs from MongoDB.
+        2024-06-26 => Created BuyImageView for purchasing an image and adding it to the user's collection.
+        2024-06-26 => Added GetMyImageView for retrieving images from the user's collection.
+        2024-06-26 => Implemented DeleteSentImageView for removing an image from the user's collection.
+    <End of modification section>
+"""
+
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView

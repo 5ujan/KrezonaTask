@@ -1,3 +1,16 @@
+"""
+Description: Views for handling user registration and login with MongoDB using Django REST Framework and JWT authentication.
+Author: Sujan Baskota
+Date created: 2024-06-26
+Date modified: 2024-06-27
+Modifications added:
+    <Start of modifications section> 
+        2024-06-26 => Initial creation of RegisterView and LoginView for user registration and login using MongoDB.
+        2024-06-26 => Added password hashing with SHA-256 and implemented MongoDBUser class for user data handling.
+        2024-06-26 => Included JWT token generation for registered and logged-in users.
+    <End of modification section> 
+"""
+
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status

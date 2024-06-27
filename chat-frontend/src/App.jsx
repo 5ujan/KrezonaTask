@@ -1,4 +1,13 @@
-// src/App.js
+/* 
+   Description: Main entry point for the application routing.
+   Author: Sujan Baskota
+   Date created: June 26, 2024
+   Date modified: June 26, 2024
+   <Start of modification section>
+       2024-06-26 => Added routing for Home, Login, Register, Chat, Upload, Payment, and Completion pages.
+   <End of modification section>
+*/
+
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { AppProvider } from "./components/Context";

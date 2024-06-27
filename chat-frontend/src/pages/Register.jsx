@@ -1,4 +1,13 @@
-// src/components/Login.js
+/*
+   Description: Registration component for creating new user accounts.
+   Author: Sujan Baskota
+   Date created: June 25, 2024
+   Date modified: June 26, 2024
+   <Start of modification section>
+       2024-06-25 => Initial creation of Register component with form handling and user registration.
+   <End of modification section>
+*/
+
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useGlobalContext } from "../components/Context";

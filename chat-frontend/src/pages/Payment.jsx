@@ -1,8 +1,17 @@
+/*
+   Description: Payment component integrating Stripe for handling payments.
+   Author: Sujan Baskota
+   Date created: June 26, 2024
+   Date modified: June 26, 2024
+   <Start of modification section>
+       2024-06-26 => Initial creation of Payment component with Stripe integration.
+   <End of modification section>
+*/
+
 import { useEffect, useState } from "react";
 import { Elements } from "@stripe/react-stripe-js";
 import CheckoutForm from "../components/CheckoutForm";
 import { loadStripe } from "@stripe/stripe-js";
-import "../components/stripe.css";
 import { useGlobalContext } from "../components/Context";
 
 function Payment() {

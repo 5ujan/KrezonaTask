@@ -1,7 +1,16 @@
-# # views.py
+"""
+Description: Contains API views for configuring Stripe and handling payment intents.
+Author: Sujan Baskota
+Date created: June 26, 2024
+Date modified: June 26, 2024
+Modifications added:
+    <Start of modifications section>
+        2024-06-26 => Added ConfigView to provide Stripe publishable key to clients.
+        2024-06-26 => Implemented CreatePaymentIntent for creating Stripe PaymentIntents.
+    <End of modification section>
+"""
+
 from django.conf import settings
-# from rest_framework.response import Response
-# from django.views.decorators.csrf import csrf_exempt
 import stripe
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -10,7 +19,7 @@ stripe.api_key = settings.STRIPE_SECRET_KEY
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
- # Assuming you have a User model defined
+# Assuming you have a User model defined
 
 
 class ConfigView(APIView):
@@ -33,4 +42,3 @@ class CreatePaymentIntent(APIView):
                 return Response({"clientSecret": intent.client_secret})
             except Exception as e:
                 return Response({"error": str(e)}, status=400)
-

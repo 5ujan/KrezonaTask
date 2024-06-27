@@ -1,4 +1,15 @@
-# chat/views.py
+"""
+Description: Views for handling chat messages, including retrieving all messages and sending a new message.
+Author: Sujan Baskota
+Date created: 2024-06-26
+Date modified: 2024-06-27
+Modifications added:
+    <Start of modifications section> 
+        2024-06-26 => Initial creation of MessageListView for retrieving and sending chat messages.
+        2024-06-26 => Added check for empty message content and response handling.
+        2024-06-26 => Included username in message data during message insertion.
+    <End of modification section> 
+"""
 
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -8,7 +19,6 @@ from .models import Message
 
 
 class MessageListView(APIView):
-    # permission_classes = [IsAuthenticated]  # Ensure user is authenticated
 
     def get(self, request):
         messages = Message.get_all_messages()

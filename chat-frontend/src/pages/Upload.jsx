@@ -1,11 +1,21 @@
+/*
+   Description: Component for uploading images and displaying uploaded GIFs.
+   Author: Sujan Baskota
+   Date created: June 26, 2024
+   Date modified: June 26, 2024
+   <Start of modification section>
+       2024-06-26 => Initial creation of UploadImage component with image upload and display functionality.
+   <End of modification section>
+*/
+
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useGlobalContext } from "../components/Context";
 
 const UploadImage = () => {
   const [image, setImage] = useState(null);
-  const {gifUrls, setGifUrls} = useGlobalContext();
- 
+  const { gifUrls, setGifUrls } = useGlobalContext();
+
   const handleImageChange = (e) => {
     setImage(e.target.files[0]);
   };
@@ -28,15 +38,15 @@ const UploadImage = () => {
         //   ...prevGifUrls,
         //   ...response.data.gif_urls,
         // ]);
-      try {
-        const response = await axios.get(
-          "http://localhost:8000/api/images/get"
-        );
-        setGifUrls(response.data.gif_urls);
-        console.log(response.data.gif_urls);
-      } catch (error) {
-        console.error("Error fetching images:", error);
-      }
+        try {
+          const response = await axios.get(
+            "http://localhost:8000/api/images/get"
+          );
+          setGifUrls(response.data.gif_urls);
+          console.log(response.data.gif_urls);
+        } catch (error) {
+          console.error("Error fetching images:", error);
+        }
       } catch (error) {}
       console.error("Error uploading image:", error);
     }

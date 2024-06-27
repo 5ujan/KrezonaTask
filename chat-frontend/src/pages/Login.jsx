@@ -1,37 +1,43 @@
-// src/components/Login.js
+/*
+   Description: Login component for user authentication.
+   Author: Sujan Baskota
+   Date created: June 25, 2024
+   Date modified: June 26, 2024
+   <Start of modification section>
+       2024-06-25 => Initial creation of Login component with email and password authentication.
+   <End of modification section>
+*/
+
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useGlobalContext } from "../components/Context";
 import { loginUser } from "../components/apicalls";
 
 const Login = () => {
-  const {user, setUser } = useGlobalContext();
+  const { user, setUser } = useGlobalContext();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
 
-    useEffect(() => {
-      const loggedInUser = localStorage.getItem("user");
-      if (loggedInUser) {
-        navigate("/chat"); // Redirect to chat if user is already logged in
-      }
-    }, [navigate]);
-
-    
-  
-  const handleSubmit = (e) => {
-    const wrapper = async()=>{
-
-        e.preventDefault();
-        const user  = await loginUser(email, password)
-        // Assume a successful login for demonstration purposes
-        // Replace with actual user data after authentication
-        console.log(user.user)
-        setUser(user);
-        localStorage.setItem("user", JSON.stringify(user.user));
-        navigate("/chat");
+  useEffect(() => {
+    const loggedInUser = localStorage.getItem("user");
+    if (loggedInUser) {
+      navigate("/chat"); // Redirect to chat if user is already logged in
     }
-    wrapper()
+  }, [navigate]);
+
+  const handleSubmit = (e) => {
+    const wrapper = async () => {
+      e.preventDefault();
+      const user = await loginUser(email, password);
+      // Assume a successful login for demonstration purposes
+      // Replace with actual user data after authentication
+      console.log(user.user);
+      setUser(user);
+      localStorage.setItem("user", JSON.stringify(user.user));
+      navigate("/chat");
+    };
+    wrapper();
   };
 
   return (

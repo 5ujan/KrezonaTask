@@ -1,3 +1,13 @@
+/*
+   Description: Component to handle the completion of the purchase process.
+   Author: Sujan Baskota
+   Date created: June 26, 2024
+   Date modified: June 26, 2024
+   <Start of modification section>
+       2024-06-26 => Initial creation of Completion component to handle purchase completion and navigation.
+   <End of modification section>
+*/
+
 import { useEffect } from "react";
 import { useGlobalContext } from "../components/Context";
 

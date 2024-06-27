@@ -1,3 +1,13 @@
+/*
+   Description: Payment form component using Stripe PaymentElement for handling payments.
+   Author: Sujan Baskota
+   Date created: June 27, 2024
+   Date modified: June 27, 2024
+   <Start of modification section>
+       2024-06-27 => Initial creation of CheckoutForm component for Stripe payment handling.
+   <End of modification section>
+*/
+
 import { PaymentElement } from "@stripe/react-stripe-js";
 import { useState } from "react";
 import { useStripe, useElements } from "@stripe/react-stripe-js";

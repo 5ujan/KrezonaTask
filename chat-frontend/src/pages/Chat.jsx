@@ -1,3 +1,13 @@
+/*
+   Description: Main component for the chat functionality.
+   Author: Sujan Baskota
+   Date created: June 26, 2024
+   Date modified: June 26, 2024
+   <Start of modification section>
+       2024-06-26 => Initial creation of the Chat component with WebSocket connection and message handling.
+   <End of modification section>
+*/
+
 import React, { useEffect, useState, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { useGlobalContext } from "../components/Context";
