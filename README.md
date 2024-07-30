@@ -2,7 +2,9 @@
 
 ## Overview
 
-This project is a Django REST Framework application with integrated WebSocket communication using Channels. It allows users to communicate via chat, send GIFs (after purchase), and includes an admin interface for managing GIF uploads. Payment processing is handled via Stripe. The frontend is developed using React, and the database used is MongoDB.
+This project is a Django REST Framework application with integrated WebSocket communication using Channels. It allows users to communicate via chat, send GIFs (after purchase), and includes an admin interface for managing GIF uploads. Payment processing is handled via Stripe. The frontend is developed using React, and the database used is MongoDB. 
+
+The 24 hour coding task involved payment processing, cloud storage, socket communication, user registration and authentication all bundled together to form chat application.
 
 ## Folder Structure
 
@@ -109,6 +111,11 @@ The React frontend (`chat-frontend`) is a single-page application for interactin
 
 - **Deployment:**
   - Deploy the Django backend and React frontend separately or together using platforms like Heroku, AWS, or Docker.
+
+## Demo
+- **Video Tutorial**
+  - A two minute walkthrough on all the functionalities implemented.
+  - ![Google Drive Link](https://drive.google.com/file/d/1-otiT7xjmESF0X7Ic7-LKDq2Mj_vm5jX/view)
 
 ## Conclusion
 
