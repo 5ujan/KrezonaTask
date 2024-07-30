@@ -113,9 +113,14 @@ The React frontend (`chat-frontend`) is a single-page application for interactin
   - Deploy the Django backend and React frontend separately or together using platforms like Heroku, AWS, or Docker.
 
 ## Demo
+
 - **Video Tutorial**
   - A two minute walkthrough on all the functionalities implemented.
-  - ![Google Drive Link](https://drive.google.com/file/d/1-otiT7xjmESF0X7Ic7-LKDq2Mj_vm5jX/view)
+  ![Google Drive Link](https://drive.google.com/file/d/1-otiT7xjmESF0X7Ic7-LKDq2Mj_vm5jX/view)
+
+- **Chat Feature**
+  - The gif below shows the chat feature viewed independently without payment integration
+  ![](https://raw.githubusercontent.com/5ujan/KrezonaTask/main/chat-frontend/public/task.gif)
 
 ## Conclusion
 
